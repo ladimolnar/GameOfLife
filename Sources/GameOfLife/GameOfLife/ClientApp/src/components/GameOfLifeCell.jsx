@@ -2,7 +2,7 @@ import React from 'react';
 import BoardConstants from "../services/BoardConstants.js";
 import GameOfLifeController from '../services/GameOfLifeController.js';
 
-import './GameOfLifeCell.css';
+import '../styles/GameOfLifeCell.css';
 
 /**
  * Handles a click on a board cell.

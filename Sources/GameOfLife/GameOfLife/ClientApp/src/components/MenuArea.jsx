@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 
-import './MenuArea.css';
+import '../styles/MenuArea.css';
 
 
 function MenuArea() {
