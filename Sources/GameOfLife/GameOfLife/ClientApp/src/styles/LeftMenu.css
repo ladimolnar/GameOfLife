@@ -1,6 +1,28 @@
 ﻿
-.menu {
+.left-menu {
     display: block;
     height: 100%;
-    background-color: #e0e8ef;
 }
+
+.button-menu {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+}
+
+.left-menu-inner {
+    padding: 10px;
+}
+
+#btnHome {
+    margin-top: 0;
+}
+
+#btnLoad {
+    margin-top: 20px;
+}
+
+#btnHelp {
+    margin-top: 50px;
+}
+

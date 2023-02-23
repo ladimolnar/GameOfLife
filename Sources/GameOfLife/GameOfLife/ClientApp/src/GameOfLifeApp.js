@@ -23,11 +23,11 @@ function GameOfLifeApp() {
         <main>
 
             <section className="section-top">
-                <h1>Conway's Game of Life</h1>
+                <span>Conway's Game of Life</span>
             </section>
 
             <section className="section-left">
-                <LeftMenu />
+                <LeftMenu gameOfLifeController={gameOfLifeController} />
             </section>
 
             <section className="section-controls">

@@ -1,17 +1,19 @@
 ﻿
-.controls-area {
+.top-menu {
     display: grid;
     grid-template-columns: max-content minmax(100px, auto) max-content;
-    background-color: #e0e8ef;
     padding: 5px 15px;
 }
 
-.controls-left {
+.top-menu-left {
     grid-column: 1/2;
     display: flex;
 }
 
-.controls-right {
+.top-menu-right {
     grid-column: 3/4;
     display: flex;
 }
+
+
+

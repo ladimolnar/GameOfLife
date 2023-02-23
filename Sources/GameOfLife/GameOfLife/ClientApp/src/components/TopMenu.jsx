@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useCallback } from 'react';
+﻿import React from 'react';
 import PlayControls from './PlayControls';
 import FrameNumber from './FrameNumber';
 import SpeedSlider from './SpeedSlider';
@@ -15,11 +15,11 @@ function TopMenu({ gameOfLifeController }) {
 
     return (
         <>
-            <div className="controls-area">
-                <div className="controls-left" >
+            <div className="top-menu menu">
+                <div className="top-menu-left" >
                     <PlayControls gameOfLifeController={gameOfLifeController} />
                 </div>
-                <div className="controls-right" >
+                <div className="top-menu-right" >
                     <SpeedSlider gameOfLifeController={gameOfLifeController} />
                     <FrameNumber gameOfLifeController={gameOfLifeController} />
                 </div>

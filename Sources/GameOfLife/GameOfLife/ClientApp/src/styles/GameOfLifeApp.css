@@ -1,9 +1,10 @@
 ﻿body {
-    background-color: aquamarine;
+    background-color: transparent;
 }
 
 section {
-    border: 2px solid black;
+    background-color: transparent;
+    margin: 5px;
 }
 
 main {
@@ -15,12 +16,14 @@ main {
 .section-top {
     grid-column: 1 / 3;
     padding: 0px 10px;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin: 20px 0px;
 }
 
 .section-left {
     grid-column: 1;
     grid-row: 2/4;
-    
 }
 
 .section-controls {
