@@ -1,0 +1,7 @@
+﻿
+.controls-area {
+    display: grid;
+    grid-template-columns: max-content minmax(100px, auto) max-content;
+    background-color: #e0e8ef;
+    padding: 5px 15px;
+}

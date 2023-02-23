@@ -1,0 +1,12 @@
+
+.board {
+    background-color: white;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+.board-row {
+    display: flex;
+    height: auto;
+}

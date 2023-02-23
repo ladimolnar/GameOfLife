@@ -1,0 +1,27 @@
+
+.board-cell {
+    display: inline-block;
+}
+
+/* This style will be updated programmatically as needed based on the board size. */
+.board-cell-calculated {
+    width: 17px;
+    height: 17px;
+    margin: 2px;
+}
+
+.board-cell-alive {
+    background-color: #448d99;
+}
+
+    .board-cell-alive:hover {
+        background-color: #A0A0A0;
+    }
+
+.board-cell-empty {
+    background-color: #d0d0d0;
+}
+
+    .board-cell-empty:hover {
+        background-color: #74bdc9;
+    }

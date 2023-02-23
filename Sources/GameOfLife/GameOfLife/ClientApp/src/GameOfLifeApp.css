@@ -13,25 +13,23 @@ main {
     grid-template-rows: min-content auto min-content;
 }
 
-.SectionTop {
+.section-top {
     grid-column: 1 / 3;
     padding: 0px 10px;
 }
 
-.SectionLeft {
+.section-left {
     grid-column: 1;
     grid-row: 2/4;
     
 }
 
-.SectionControls {
+.section-controls {
     grid-column: 2/3;
     grid-row: 2/3;
 }
 
-.SectionBoard {
+.section-board {
     grid-column: 2/3;
     grid-row: 3/4;
-    width: 400px;
-    height: 400px;
 }
