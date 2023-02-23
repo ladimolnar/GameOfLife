@@ -5,7 +5,7 @@ import { subscribe, unsubscribe } from "../services/Events.js"
 import '../styles/GameOfLifeBoard.css';
 
 // Handles the change in the board size. Updates the CSS styles that control a cell
-// so that the new (larger or smaller) board will still look good on th escreen.
+// so that the new (larger or smaller) board will still look good on the screen.
 function UpdateBoardStyleAccordingToSize({ rows, cols }) {
 
     let cellSize = 17;
