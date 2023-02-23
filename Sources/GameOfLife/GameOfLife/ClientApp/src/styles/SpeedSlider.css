@@ -1,0 +1,33 @@
+﻿
+.speed-slider-area {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.speed-slider {
+    -webkit-appearance: none;
+    width: 120px;
+    margin-left: 15px;
+    background: #6080a0;
+    border: 1px solid #606060;
+    border-radius: 7px;
+    height: 7px;
+}
+
+.speed-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 21px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #404040;
+    background: #44a0c0;
+    cursor: pointer;
+}
+
+#speed_icon {
+    width: 32px;
+    height: 32px;
+    margin-top: 5px;
+}

@@ -1,0 +1,36 @@
+﻿
+
+.ui-hidden {
+    display: none;
+}
+
+.ui-visible {
+    display: initial;
+}
+
+.buttonSvg {
+    fill: #205050;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-size: contain;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+    .buttonSvg:hover {
+        fill: white;
+        background-color: #60a0e0;
+        border-radius: 7px;
+    }
+
+    .buttonSvg:active {
+        background-color: #4060a0;
+    }
+
+    .buttonSvg:disabled {
+        background-color: transparent;
+        fill: #a0a0a0;
+        cursor: auto;
+    }
+

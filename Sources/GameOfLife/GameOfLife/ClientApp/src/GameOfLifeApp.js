@@ -2,8 +2,8 @@ import React, { useEffect, useMemo } from 'react';
 import GameOfLifeEngine from './services/GameOfLifeEngine.js';
 import GameOfLifeController from './services/GameOfLifeController.js';
 import GameOfLifeBoard from './components/GameOfLifeBoard.jsx';
-import MenuArea from './components/MenuArea.jsx';
-import PlayControlsArea from './components/PlayControlsArea.jsx';
+import LeftMenu from './components/LeftMenu.jsx';
+import TopMenu from './components/TopMenu.jsx';
 import boardFactory from './utils/BoardFactory.js';
 
 import './styles/GameOfLifeApp.css';
@@ -27,11 +27,11 @@ function GameOfLifeApp() {
             </section>
 
             <section className="section-left">
-                <MenuArea />
+                <LeftMenu />
             </section>
 
             <section className="section-controls">
-                <PlayControlsArea gameOfLifeController={gameOfLifeController} />
+                <TopMenu gameOfLifeController={gameOfLifeController} />
             </section>
 
             <section className="section-board">

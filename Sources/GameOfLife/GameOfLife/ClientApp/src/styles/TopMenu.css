@@ -5,3 +5,13 @@
     background-color: #e0e8ef;
     padding: 5px 15px;
 }
+
+.controls-left {
+    grid-column: 1/2;
+    display: flex;
+}
+
+.controls-right {
+    grid-column: 3/4;
+    display: flex;
+}
