@@ -1,6 +1,7 @@
 ﻿import React, { useState, useEffect, useCallback } from 'react';
-import AppConstants from '..//utils/AppConstants.js';
+import AppConstants from '../utils/AppConstants.js';
 import SvgButtons from '../BootstrapIcons/SvgButtons.jsx';
+import HelpPage from './HelpPage.jsx';
 import { subscribe, unsubscribe } from "../services/Events.js"
 
 import '../styles/Common.css';
@@ -54,19 +55,19 @@ function tryReduceBoardSize(boardSize) {
     return false;
 }
 
-async function loadBoardIds() {
-    console.log('Fetching board Ids from the server...');
-    const response = await fetch('boards');
-    const data = await response.json();
-    console.log('Board Ids : ' + JSON.stringify(data));
-}
+//async function loadBoardIds() {
+//    console.log('Fetching board Ids from the server...');
+//    const response = await fetch('boards');
+//    const data = await response.json();
+//    console.log('Board Ids : ' + JSON.stringify(data));
+//}
 
 /**
  * Component. Renders the left menu.
  * 
  * @param {{gameOfLifeController: GameOfLifeController}} props 
  */
-function LeftMenu({ gameOfLifeController }) {
+function LeftMenu({ gameOfLifeController, showModal }) {
 
     const [minSizeReached, setMinSizeReached] = useState(false);
     const [maxSizeReached, setMaxSizeReached] = useState(false);
@@ -140,7 +141,10 @@ function LeftMenu({ gameOfLifeController }) {
                     <button
                         id="btnHelp"
                         className="buttonSvg button-menu"
-                        title="Help">
+                        title="Help"
+                        onClick={() => {
+                            showModal("Conway's Game of Life", <HelpPage />);
+                        }}>
                         {SvgButtons.bi_question_circle}
                     </button>
                 </div>
