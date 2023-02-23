@@ -26,7 +26,7 @@ function PlayControls({ gameOfLifeController }) {
             <button
                 id="btnRestart"
                 className="buttonSvg buttonControls"
-                title="Restart with frame 1"
+                title="Jump to frame 1"
                 onClick={() => gameOfLifeController.rewindToFrameZero()} >
                 {SvgButtons.bi_skip_start_btn}
             </button>

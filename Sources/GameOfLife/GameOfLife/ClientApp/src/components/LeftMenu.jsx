@@ -99,7 +99,7 @@ function LeftMenu({ gameOfLifeController, showModal }) {
                     <button
                         id="btnHome"
                         className="buttonSvg button-menu"
-                        title="Reset to initial board"
+                        title="Reset to initial configuration"
                         onClick={() => gameOfLifeController.resetToInitialBoard()} >
                         {SvgButtons.bi_house_door}
                     </button>
@@ -125,7 +125,7 @@ function LeftMenu({ gameOfLifeController, showModal }) {
                     <button
                         id="btnRandom"
                         className="buttonSvg button-menu"
-                        title="Set random board"
+                        title="Randomize board"
                         onClick={() => gameOfLifeController.setRandomBoard()} >
                         {SvgButtons.bi_shuffle}
                     </button>
