@@ -1,2 +1,2 @@
 # GameOfLife
-My excuse to play with Azure DevOps and ReactJS
+My excuse to brush-up on my Azure DevOps and ReactJS.
