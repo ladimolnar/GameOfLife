@@ -17,7 +17,6 @@ class GameOfLifeController {
      * @param {number[][]} initialBoard
     */
     constructor(gameOfLifeEngine, initialBoard) {
-        console.log("GameOfLifeController.constructor()", gameOfLifeEngine);
 
         this._intervalId = null;
         this._gameOfLifeEngine = gameOfLifeEngine;
@@ -46,17 +45,14 @@ class GameOfLifeController {
     }
 
     rewindToFrameZero() {
-        console.log("GameOfLifeController.rewindToFrameZero()");
         this._setFrameZeroBoard(this._frameZeroBoard);
     }
 
     resetToInitialBoard() {
-        console.log("GameOfLifeController.rewindToInitialBoard()");
         this._setFrameZeroBoard(this._initialBoard);
     }
 
     resetToEmptyBoard() {
-        console.log("GameOfLifeController.resetToEmptyBoard()");
 
         const { rows, cols } = this.getBoardSize();
 
@@ -66,7 +62,6 @@ class GameOfLifeController {
     }
 
     setRandomBoard() {
-        console.log("GameOfLifeController.setRandomBoard()");
 
         const { rows, cols } = this.getBoardSize();
         const newBoard = Array(rows).fill().map(() => Array(cols).fill(BoardConstants.CellValueEmpty));
@@ -103,7 +98,6 @@ class GameOfLifeController {
     }
 
     toggleCell(row, col) {
-        console.log("GameOfLifeController.toggleCell()", row, col);
 
         const { rows, cols } = this.getBoardSize();
         if (row < 0 || row >= rows || col < 0 || col >= cols) {
@@ -119,7 +113,6 @@ class GameOfLifeController {
     }
 
     setSpeed(speedInMilliseconds) {
-        console.log("GameOfLifeController.setSpeed()", speedInMilliseconds);
 
         if (this._speedInMilliseconds !== speedInMilliseconds) {
             this._speedInMilliseconds = speedInMilliseconds;
@@ -137,7 +130,6 @@ class GameOfLifeController {
     }
 
     startPlay() {
-        console.log("GameOfLifeController.startPlay()");
 
         if (this.playState !== GameOfLifeController.PlayState.RUNNING) {
 
@@ -151,7 +143,6 @@ class GameOfLifeController {
     }
 
     pausePlay() {
-        console.log("GameOfLifeController.pausePlay()");
 
         if (this._intervalId !== null) {
             clearInterval(this._intervalId);
@@ -165,7 +156,6 @@ class GameOfLifeController {
     }
 
     nextFrame() {
-        console.log("GameOfLifeController.nextFrame()");
         this._calculateNextFrame();
     }
 
@@ -190,7 +180,6 @@ class GameOfLifeController {
     }
 
     _calculateNextFrame() {
-        console.log("GameOfLifeController._calculateNextFrame()");
 
         if (this._gameOfLifeEngine.computeBoardNextStep()) {
             const newBoard = this._gameOfLifeEngine.getBoard();

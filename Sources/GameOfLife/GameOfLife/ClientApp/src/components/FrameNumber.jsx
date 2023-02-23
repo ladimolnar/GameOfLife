@@ -10,12 +10,9 @@ import '../styles/FrameNumber.css';
  */
 function FrameNumber({ gameOfLifeController }) {
 
-    console.log("FrameNumber: ", gameOfLifeController);
-
     const [frameNumber, setFrameNumber] = useState(gameOfLifeController.frameNumber);
 
     const updateFrameNumber = useCallback((event) => {
-        console.log("FrameNumber: updateFrameNumber: ", event.detail);
         setFrameNumber(event.detail.frameNumber);
     }, []);
 

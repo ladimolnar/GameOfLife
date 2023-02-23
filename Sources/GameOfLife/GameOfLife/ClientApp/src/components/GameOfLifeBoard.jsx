@@ -8,8 +8,6 @@ import '../styles/GameOfLifeBoard.css';
 // so that the new (larger or smaller) board will still look good on th escreen.
 function UpdateBoardStyleAccordingToSize({ rows, cols }) {
 
-    console.log("UpdateBoardStyleAccordingToSize()", rows, cols)
-
     let cellSize = 17;
     let cellMargin = 2;
 
@@ -28,7 +26,6 @@ function UpdateBoardStyleAccordingToSize({ rows, cols }) {
     let style = document.createElement("style");
     style.innerHTML = `.board-cell-calculated { width: ${cellSize}px; height: ${cellSize}px; margin: ${cellMargin}px; }`;
 
-    console.log(style);
     document.head.appendChild(style);
 }
 
@@ -38,16 +35,10 @@ function UpdateBoardStyleAccordingToSize({ rows, cols }) {
  * @param {{gameOfLifeController: GameOfLifeController}} props 
  */
 function GameOfLifeBoard({ gameOfLifeController }) {
-    console.log("GameOfLifeBoard()", gameOfLifeController);
-
 
     const [board, setBoard] = useState(gameOfLifeController.getBoard());
 
-    const updateBoard = useCallback((event) => {
-        console.log("GameOfLifeBoard.updateBoard()", event.detail.board)
-
-        setBoard(event.detail.board)
-    }, []);
+    const updateBoard = useCallback((event) => { setBoard(event.detail.board) }, []);
 
     const handleBoardSizeChanged = useCallback((event) => UpdateBoardStyleAccordingToSize(event.detail), []);
 
@@ -67,7 +58,6 @@ function GameOfLifeBoard({ gameOfLifeController }) {
         return () => unsubscribe("GameOfLifeController:BoardSizeChanged", handleBoardSizeChanged);
     }, [handleBoardSizeChanged]);
 
-    console.log("GameOfLifeBoard.render()", board);
     return (
         <div className="board">
             {

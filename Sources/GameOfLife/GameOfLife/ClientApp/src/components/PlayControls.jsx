@@ -12,16 +12,9 @@ import '../styles/Common.css';
  */
 function PlayControls({ gameOfLifeController }) {
 
-    console.log("PlayControls: ", gameOfLifeController);
-
     const [playState, setPlayState] = useState(gameOfLifeController.playState);
 
-    const updatePlayState = useCallback((event) => {
-        console.log("PlayControls: updatePlayState: ", event.detail);
-        if (event.detail) {
-            setPlayState(event.detail.playState);
-        }
-    }, []);
+    const updatePlayState = useCallback((event) => { setPlayState(event.detail.playState); }, []);
 
     useEffect(() => {
         subscribe("GameOfLifeController:PlayStateChanged", updatePlayState);

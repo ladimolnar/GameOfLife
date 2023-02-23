@@ -138,14 +138,6 @@ function LeftMenu({ gameOfLifeController }) {
                     </button>
 
                     <button
-                        id="btnLoad"
-                        className="buttonSvg button-menu"
-                        title="Load board configuration"
-                        onClick={() => loadBoardIds()} >
-                        {SvgButtons.bi_cloud_arrow_down}
-                    </button>
-
-                    <button
                         id="btnHelp"
                         className="buttonSvg button-menu"
                         title="Help">
@@ -160,6 +152,15 @@ function LeftMenu({ gameOfLifeController }) {
 export default LeftMenu;
 
 /*
+
+                <button
+                    id="btnLoad"
+                    className="buttonSvg button-menu"
+                    title="Load board configuration"
+                    onClick={() => loadBoardIds()} >
+                    {SvgButtons.bi_cloud_arrow_down}
+                </button>
+
                 <button
                     id="btnSave"
                     className="buttonSvg button-menu"
