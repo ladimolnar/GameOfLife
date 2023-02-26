@@ -13,9 +13,9 @@ function HelpPage() {
             the following rules are applied:
 
             <ul>
-                <li>A cell with fewer than 2 neighbors dies, as if by starvation.</li>
-                <li>A cell with more than 3 neighbors dies, as if by overpopulation.</li>
-                <li>A new cell appears in an empty position that has exactly 3 neighbors.</li>
+                <li>Any live cell with fewer than 2 neighbors dies, as if by starvation.</li>
+                <li>Any live cell with more than 3 neighbors dies, as if by overpopulation.</li>
+                <li>A new cell appears in an empty position that has exactly 3 neighbors as if by reproduction.</li>
             </ul>
 
             These simple rules can lead to complex patterns and behaviors.
