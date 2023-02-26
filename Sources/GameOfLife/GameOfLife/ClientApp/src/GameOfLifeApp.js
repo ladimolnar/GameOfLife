@@ -9,15 +9,26 @@ import boardFactory from './utils/BoardFactory.js';
 
 import './styles/GameOfLifeApp.css';
 
+/**
+ * Starts the game of life for the first time.
+ * @param { GameOfLifeController } gameOfLifeController
+*/
+function InitiateFirstTimePlay(gameOfLifeController) {
+    setTimeout(() => {
+        if (gameOfLifeController.playState === GameOfLifeController.PlayState.NOTSTARTED) {
+            gameOfLifeController.startPlay();
+        }
+    }, 1000);
+}
+
 // The main component in the application.
 function GameOfLifeApp() {
 
     const [modalProperties, setModalProperties] = useState(false);
-    const [modalContent, setModalContent] = useState(null);
     const gameOfLifeController = useMemo(() => new GameOfLifeController(new GameOfLifeEngine(), boardFactory()), []);
 
     useEffect(() => {
-        gameOfLifeController.startPlay();
+        InitiateFirstTimePlay(gameOfLifeController);
         return () => gameOfLifeController.pausePlay();
     }, [gameOfLifeController]);
 

@@ -13,7 +13,7 @@ import '../styles/GameOfLifeCell.css';
  */
 function handleCellClick(gameOfLifeController, row, col) {
 
-    if (gameOfLifeController.playState === "running") {
+    if (gameOfLifeController.playState === GameOfLifeController.PlayState.RUNNING) {
         gameOfLifeController.pausePlay();
     }
     else {

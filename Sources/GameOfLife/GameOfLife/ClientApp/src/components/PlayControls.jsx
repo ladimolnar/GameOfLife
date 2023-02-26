@@ -1,6 +1,7 @@
 ﻿import React, { useState, useEffect, useCallback } from 'react';
 import SvgButtons from '../BootstrapIcons/SvgButtons.jsx';
 import { subscribe, unsubscribe } from "../services/Events.js"
+import GameOfLifeController from '../services/GameOfLifeController.js';
 
 import '../styles/PlayControls.css';
 import '../styles/Common.css';
@@ -33,16 +34,18 @@ function PlayControls({ gameOfLifeController }) {
 
             <button
                 id="btnPause"
-                className={`buttonSvg buttonControls ${playState === "paused" ? "ui-hidden" : "ui-visible"} `}
+                className={`buttonSvg buttonControls ${(playState === GameOfLifeController.PlayState.PAUSED || playState === GameOfLifeController.PlayState.NOTSTARTED) ? "ui-hidden" : "ui-visible"} `}
                 title="Pause"
+                disabled={playState === GameOfLifeController.PlayState.NOTSTARTED}
                 onClick={() => gameOfLifeController.pausePlay()} >
                 {SvgButtons.bi_pause_btn}
             </button>
 
             <button
                 id="btnPlay"
-                className={`buttonSvg buttonControls ${playState === "running" ? "ui-hidden" : "ui-visible"} `}
+                className={`buttonSvg buttonControls ${playState === GameOfLifeController.PlayState.RUNNING ? "ui-hidden" : "ui-visible"} `}
                 title="Play"
+                disabled={playState === GameOfLifeController.PlayState.NOTSTARTED}
                 onClick={() => gameOfLifeController.startPlay()} >
                 {SvgButtons.bi_play_btn}
             </button>
@@ -51,7 +54,7 @@ function PlayControls({ gameOfLifeController }) {
                 id="btnNextFrame"
                 className="buttonSvg buttonControls"
                 title="Next frame"
-                disabled={playState !== "paused"}
+                disabled={playState !== GameOfLifeController.PlayState.PAUSED}
                 onClick={() => gameOfLifeController.nextFrame()} >
                 {SvgButtons.bi_1_square_mod}
             </button>

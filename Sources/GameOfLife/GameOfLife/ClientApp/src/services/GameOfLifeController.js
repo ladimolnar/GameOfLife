@@ -7,6 +7,7 @@ import { publish } from "../services/Events.js"
 class GameOfLifeController {
 
     static PlayState = {
+        NOTSTARTED: 'not-started',
         PAUSED: 'paused',
         RUNNING: 'running',
     };
@@ -26,7 +27,7 @@ class GameOfLifeController {
 
         this._gameOfLifeEngine.setBoard(this._initialBoard);
 
-        this.playState = GameOfLifeController.PlayState.PAUSED;
+        this.playState = GameOfLifeController.PlayState.NOTSTARTED;
         this.frameNumber = 0;
         this._speedInMilliseconds = 200;
     }
@@ -149,7 +150,7 @@ class GameOfLifeController {
             this._intervalId = null;
         }
 
-        if (this.playState !== GameOfLifeController.PlayState.PAUSED) {
+        if (this.playState === GameOfLifeController.PlayState.RUNNING) {
             this.playState = GameOfLifeController.PlayState.PAUSED;
             publish("GameOfLifeController:PlayStateChanged", { playState: this.playState });
         }
